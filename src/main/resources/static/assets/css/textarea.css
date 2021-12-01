@@ -1,0 +1,64 @@
+.note-editor,
+.note-frame{
+    border-radius: 7px;
+}
+
+.note-toolbar{
+    background-color: #1B1F26;
+    border-color: #2a343e;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.note-btn{
+    background-color: #2a343e;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.note-btn:hover,
+.note-btn:focus,
+.note-btn.active{
+    background-color: #1B1F26;
+    border: 1px solid;
+}
+
+.note-icon-italic,
+.note-icon-underline,
+.note-icon-eraser,
+.note-icon-strikethrough,
+.note-icon-superscript,
+.note-icon-subscript,
+.note-current-fontsize,
+.note-icon-caret,
+.note-icon-font,
+.note-icon-orderedlist,
+.note-icon-caret,
+.note-icon-align-left,
+.note-icon-align-center,
+.note-icon-align-right,
+.note-icon-align-justify,
+.note-icon-align-outdent,
+.note-icon-align-indent,
+.note-dropdown-item
+{
+    color: #B4CBD9;
+}
+
+.note-dropdown-menu,
+.note-dropdown-item{
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
+.note-editable{
+    width:  100%;
+    word-break: break-all;
+
+}
+
+.note-palette{
+    display: none;
+}
+.max_w{
+    min-width: 100%;
+}

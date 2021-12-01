@@ -1,0 +1,55 @@
+div.form-container{
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+form.login-form{
+    padding: 20px 20px 50px 20px;
+    width: 400px;
+    margin: 80px auto 0 ;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-flow: column;
+}
+
+label.log{
+    color: #B4CBD9;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 10px auto;
+}
+.input{
+    justify-self: center;
+    background-color: rgba(255,255,255,.2);
+    text-align: center;
+    border-color: rgba(0,0,0,0);
+    color: #B4CBD9;
+    font-weight: bold;
+    padding: 15px;
+    width: 350px;
+    border-radius: 7px;
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    height: 54px;
+}
+
+.input:focus{
+    background-color: rgba(255,255,255,.6);
+    color:#2a343e;
+    outline: 0 none;
+    border: 0 none;
+}
+label.reg{
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+label.reg a{
+    margin: 3px auto;
+    font-size: 16px;
+    color: #B4CBD9;
+}

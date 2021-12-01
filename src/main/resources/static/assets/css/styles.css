@@ -1,0 +1,275 @@
+*{
+	margin: 0 0 0 0;
+	//font-family: 'Caveat', cursive;
+	//font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	box-sizing: border-box;
+
+}
+
+body{
+	min-height: 100%;
+	background-color: #3b4b59;
+	color: #B4CBD9;
+
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p{
+	color: #B4CBD9;
+}
+
+img{
+	max-width: 300px;
+	width: 100%;
+	height: auto;
+}
+
+
+div.main,footer{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.main{
+	min-height: calc(100vh - 50px - 70px - 20px);
+}
+.contentContainer{
+	display: flex;
+	flex-flow: row	;
+	justify-content: space-around;
+}
+
+.leftContainer{
+	flex: 2;
+	flex-basis: 50%;
+	margin-left: 100px;
+}
+.rightContainer{
+	margin-right: 100px;
+	flex: 1;
+	flex-basis: 50%;
+}
+
+.block{
+	text-align: center;
+	margin: 30px 20px 30px 20px;
+	padding: 20px;
+	border: 1px solid #2a343e;
+	border-radius: 12px;
+	background-color: #2a343e;
+	font-size: 120%;
+	max-width: 90%;
+}
+
+.flag_block{
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row;
+	margin: 30px 20px 30px 20px;
+	border: 1px solid #2a343e;
+	border-radius: 12px;
+	background-color: #2a343e;
+
+}
+.flag{
+	width: 0;
+	height: 0;
+	border-width: 120px 20px 20px ;
+	border-style: solid;
+	border-color: #AD4B7C #AD4B7C transparent;
+	margin: -5px 40px 40px;
+}
+
+
+.cover{
+	margin: -1px -1px -5px -1px;
+	min-width: 15px;
+	max-width: 15px;
+	background-color: #1B1F26;
+}
+.text{
+	padding: 20px;
+	font-size: 120%;
+	text-align: center;
+	flex:100;
+
+}
+@media only screen and (max-width: 800px) {
+	.flag{
+		display: none;
+	}
+}
+div.doc-container{
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+
+input.btn{
+	background: #1B1F26;
+	-webkit-box-shadow: 0 0 14px 0 rgba(0,0,0,0.75);
+	-moz-box-shadow: 0 0 14px 0 rgba(0,0,0,0.75);
+	box-shadow: 0 0 14px 0 rgba(0,0,0,0.75);
+	margin-left: 20px;
+	margin-top: 20px;
+	padding: 10px 20px 10px 20px;
+}
+
+.files-uploader {
+	max-width: 680px;
+	margin: auto;
+	padding: 2rem;
+}
+
+.error{
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	color: #ffffff;
+	background: #C44B4B;
+	border: 1px solid #C44B4B;
+}
+
+.form-add{
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+/*--------------Форма добавления файлов-------------------*/
+
+.files-uploader__item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.files-uploader__file-name {
+	margin-left: 1em;
+}
+
+[data-files="remove"] {
+	margin-left: auto;
+}
+
+
+
+
+
+
+/*--------------Кнопка добавления-----------------*/
+
+
+.custom-btn {
+	padding: 0 15px;
+	margin: auto;
+	height: 40px;
+	color: #B4CBD9;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.1rem;
+	outline: none;
+}
+
+
+.btn-7 {
+	background: linear-gradient(0deg, #6D7E8C 0%, #AD4B7C 100%);
+	line-height: 42px;
+	border: none;
+}
+.btn-7:before,
+.btn-7:after {
+	background: #6D7E8C;
+	transition: all 0.3s ease;
+}
+
+.btn-7:hover{
+	color: #AD4B7C;
+	border:solid 1px #AD4B7C;
+	background: transparent;
+}
+
+/*-------------------Поиск---------------------*/
+
+.searchFormDivClass{
+	min-width: 300px;
+	position: relative;
+	z-index: 0;
+
+}
+.searchContainer{
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	justify-items: center;
+	justify-content: center;
+	align-items:center;
+	margin-top: 20px;
+}
+.searchDiv{
+	justify-self: center;
+	background-color: #1B1F26;
+	margin: 20px 10px 0 10px;
+	max-width: 80%;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row;
+}
+
+.search{
+	background-color: #1B1F26;
+	color: #B4CBD9;
+	width: 95%;
+	border: 0;
+	font-weight: bold;
+	font-size: 2rem;
+	padding: 10px;
+	outline: none;
+}
+.search:hover,
+.search:focus,
+.search:active{
+	background-color: #1B1F26;
+	color: #B4CBD9;
+	border: 0;
+	outline: none;
+}
+.searchDiv span{
+	display: block;
+	width: 50px;
+	height: auto;
+	margin: 17px 0 0 0;
+	background-size: 50%;
+	background-repeat: no-repeat;
+
+	background-image: url("../img/search1.svg");
+}
+.searchParams{
+	justify-self: center;
+	background-color: #2a343e;
+	width: 77%;
+	margin: 0 15px ;
+	padding: 25px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
