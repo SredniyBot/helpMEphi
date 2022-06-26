@@ -7,6 +7,7 @@ import ru.helpmephi.helpmephi.entity.doc.Document;
 import ru.helpmephi.helpmephi.entity.doc.FilePrototype;
 import ru.helpmephi.helpmephi.repos.DocumentRepo;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class DocumentService {
@@ -43,6 +44,14 @@ public class DocumentService {
         }
     }
 
+    public void setDeletedUser(User user){
+        List<Document> documents = ( findAll().stream().filter(document -> document.getAuthor().equals(user)).collect(Collectors.toList()));
+        for(Document doc:documents){
+            doc.setAuthor(null);
+            documentRepo.save(doc);
+        }
+    }
+
     public void delete(Document document) {
         if (documentRepo.existsById(document.getId())){
             List<Content> contents=document.getContent();
@@ -51,6 +60,7 @@ public class DocumentService {
             documentRepo.delete(document);
         }
     }
+
 
     private void addContent(Document document,List<Content> files){
         for(Content content:files){

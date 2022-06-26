@@ -17,11 +17,13 @@ public class UserService implements UserDetailsService {
     private final UserRepo userRepo;
     private final MailSender mailSender;
     private final PasswordEncoder passwordEncoder;
+    private final DocumentService documentService;
 
-    public UserService(UserRepo userRepo, MailSender mailSender, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepo userRepo, MailSender mailSender, PasswordEncoder passwordEncoder, DocumentService documentService) {
         this.userRepo = userRepo;
         this.mailSender = mailSender;
         this.passwordEncoder = passwordEncoder;
+        this.documentService = documentService;
     }
 
     @Override
@@ -69,6 +71,7 @@ public class UserService implements UserDetailsService {
     }
 
     public void delete(User user) {
+        documentService.setDeletedUser(user);
         if(userRepo.existsById(user.getId())){
             userRepo.delete(user);
         }

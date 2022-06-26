@@ -29,8 +29,9 @@ public class UserController {
 
     @PreAuthorize("hasAuthority('ANGEL')")
     @GetMapping("{user}/edit")
-    public String editUser(@PathVariable User user,Model model){
+    public String editUser(@AuthenticationPrincipal User author,@PathVariable User user,Model model){
         model.addAttribute("user",user);
+        model.addAttribute("author",author);
         model.addAttribute("roles", Role.values());
         return "user_edit";
     }

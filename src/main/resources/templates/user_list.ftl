@@ -8,10 +8,11 @@
         <@b.container>
             <#list users as user>
                     <@b.flag>
+                        <#if !user.isActive()><div>DELETED</div></#if>
                         <div>User name: ${user.getUsername()?if_exists}  </div>
                         <div>User id: ${user.getId()}</div>
                         <div>User role: ${user.getRole()}</div>
-                        <div><a href="/user/${user.getId()}/edit">edit</a></div>
+                        <#if user.isActive()><div><a href="/user/${user.getId()}/edit">edit</a></div></#if>
                     </@b.flag>
             </#list>
         </@b.container>

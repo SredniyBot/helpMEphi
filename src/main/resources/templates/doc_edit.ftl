@@ -4,7 +4,10 @@
     <@b.flag>
         <div>Document id: ${document.getId()}</div>
         <#if document.getAuthor()??>
-        <div>Document author: ${document.getAuthor().getUsername()}</div></#if>
+                <div>Document author: ${document.getAuthor().getUsername()}</div>
+            <#else >
+                <div>Document author: DELETED</div>
+        </#if>
         <form action="/docs/edit" method="post" enctype="multipart/form-data">
             <div><input type="text" name="name" value="${document.getName()}"></div>
             <div><input type="text" name="comment" value="${document.getComment()}"></div>

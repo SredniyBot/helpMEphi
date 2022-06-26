@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import java.sql.Date;
 import java.time.LocalDateTime;
@@ -26,6 +27,7 @@ public class User implements UserDetails {
 
     @NotBlank(message = "Это поле не может быть пустым")
     @Length(min = 3,max = 20,message = "Имя пользователя должно содержать от 3 до 20 символов")
+    @Pattern(regexp = "\\w+",message = "Имя пользователя должно состоять только из букв цифр и нижнего подтеркивания")
     private String username;
 
     @NotBlank(message = "Это поле не может быть пустым")

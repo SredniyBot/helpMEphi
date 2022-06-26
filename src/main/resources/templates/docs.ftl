@@ -16,10 +16,6 @@
     </div>
 
         <@b.container>
-
-
-
-
             <#list documents as document>
                 <@b.flag>
                     <div>Название документа: ${document.getName()}</div>
@@ -27,6 +23,8 @@
                     <div>Комментарий: ${document.getComment()}</div>
                     <#if document.getAuthor()??>
                     <div>Author: ${document.getAuthor().getUsername()}</div>
+                        <#else >
+                    <div>Author:DELETED</div>
                     </#if>
                     <div>
                         <#list document.getContent() as content>
